@@ -1,7 +1,6 @@
 package com.ucodeacademy.practice;
 
-import org.junit.Ignore;
-import org.junit.Test;
+
 
 public class Annotations {
 
@@ -33,7 +32,7 @@ public class Annotations {
     }
 
 
-    @Test
+
     public void test2(){
         System.out.println("Test 2");
     }
