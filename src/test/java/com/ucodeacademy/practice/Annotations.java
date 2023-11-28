@@ -17,7 +17,7 @@ public class Annotations {
     // @BeforeEach: Executes/runs before each test method -> JUnit 5
 
     // @After: Executes/runs after each test method -> JUnit 4
-    // @AfterEach: Executes/runs before each test method -> JUnit 5
+    // @AfterEach: Executes/runs after each test method -> JUnit 5
 
     // @BeforeClass: Executes/runs once before all test methods in the class -> JUnit 4
     // @BeforeAll: Executes/run once before all test methods in the class -> JUnit 5
