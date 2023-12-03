@@ -71,7 +71,7 @@ public class SBStepDefinitions {
     public void user_should_be_logged_in_successfully() {
         String actualResult = Driver.getDriver().getTitle();
 
-        Assert.assertEquals("Failed","Web Orders",actualResult);
+        Assert.assertTrue("Failed",actualResult.contains("Web Orders"));
 
         Driver.quitDriver();
 

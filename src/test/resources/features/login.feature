@@ -1,4 +1,4 @@
-@test
+
 Feature: Smart bear login
 
   Background:
@@ -6,14 +6,15 @@ Feature: Smart bear login
 
 
 
+  @test1
   Scenario: Verify login functionality
-    When User enters username "Tester11" and password "test"
+    When User enters username "Tester" and password "test"
     And User clicks on login button
     Then User should be logged in successfully
 
 
 
-  @test1
+
   Scenario Outline: Verify login functionality with different credentials
 
     When User enters username "<username>" and password "<password>"
