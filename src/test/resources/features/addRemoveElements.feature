@@ -1,4 +1,4 @@
-@parallel
+@test1
 Feature: Add Remove WebElement verification
 
   Scenario: Verify add remove web element functionality

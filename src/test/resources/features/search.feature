@@ -1,5 +1,4 @@
-@xyz
-@parallel
+@test1
 Feature: Search feature
   As a user, I want to be able to search when I am on the google search page
 

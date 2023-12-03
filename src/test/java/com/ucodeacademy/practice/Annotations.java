@@ -1,9 +1,9 @@
 package com.ucodeacademy.practice;
 
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class Annotations {
 
@@ -37,10 +37,10 @@ public class Annotations {
 
 
 
-    @BeforeEach
+    @Before
     public void test2(){
         System.out.println("Test 2");
-        Assertions.assertTrue(true);
+        Assert.assertTrue(true);
     }
 
 
