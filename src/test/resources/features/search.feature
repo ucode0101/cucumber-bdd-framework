@@ -2,7 +2,7 @@
 Feature: Search feature
   As a user, I want to be able to search when I am on the google search page
 
-  @test99"
+  @test99
   Scenario: Google search verification
     When User is on the google search page
     And User searches for "java"
