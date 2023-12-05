@@ -55,7 +55,7 @@ public class Hooks {
         }
   }
 
-  @Before
+//  @Before
     public void screenshots(Scenario scenario){
         byte [] s = ( (TakesScreenshot) Driver.getDriver() ).getScreenshotAs(OutputType.BYTES);
         scenario.attach(s, "image/png",scenario.getName());
