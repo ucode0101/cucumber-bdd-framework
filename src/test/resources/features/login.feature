@@ -6,7 +6,7 @@ Feature: Smart bear login
 
 
 
-  @test1
+@test99
   Scenario: Verify login functionality
     When User enters username "Tester" and password "test"
     And User clicks on login button

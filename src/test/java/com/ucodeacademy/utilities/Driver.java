@@ -1,12 +1,16 @@
 package com.ucodeacademy.utilities;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.net.URL;
 import java.time.Duration;
 
 public class Driver {
@@ -90,8 +94,23 @@ public class Driver {
                     options.addArguments("--headless");
                     threadLocalDriver.set(new ChromeDriver(options));
                     break;
+                case "remote":
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setBrowserName("chrome"); // to change choose which browser to run tests in
+                    capabilities.setPlatform(Platform.MAC);
+
+                    try {
+                        URL url = new URL("http://localhost:4444/wd/hub");
+                        threadLocalDriver.set(new RemoteWebDriver(url, capabilities));
+
+                    } catch (Exception e){
+                        System.out.println(e.getMessage());
+                        throw new RuntimeException("Remote URL was not found");
+                    }
+                    break;
+
                 default:
-                    threadLocalDriver.set(new ChromeDriver());
+                   throw new RuntimeException("Invalid browser name");
             }
 
 

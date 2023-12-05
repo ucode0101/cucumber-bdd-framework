@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.Wait;
 
 public class AddRemoveElementStepDef {
 
@@ -45,7 +46,7 @@ public class AddRemoveElementStepDef {
 
     }
     @Then("Element should be deleted")
-    public void element_should_be_deleted() {
+    public void element_should_be_deleted() throws InterruptedException {
         // use ! to make not true
         //Assert.assertTrue(!addRemoveElementsPage.deleteButton.isDisplayed());
 
@@ -59,6 +60,7 @@ public class AddRemoveElementStepDef {
             System.out.println("Delete button is not displayed");
         }
 
+        Thread.sleep(10000);
         Driver.quitDriver();
 
     }
