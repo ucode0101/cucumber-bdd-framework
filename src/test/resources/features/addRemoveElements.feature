@@ -1,4 +1,4 @@
-@test1
+@addRemove
 Feature: Add Remove WebElement verification
 
   Scenario: Verify add remove web element functionality
