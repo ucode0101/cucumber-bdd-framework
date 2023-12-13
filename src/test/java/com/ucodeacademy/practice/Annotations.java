@@ -1,6 +1,9 @@
 package com.ucodeacademy.practice;
 
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class Annotations {
 
@@ -27,14 +30,17 @@ public class Annotations {
 
 
 
+    @Test
     public void test1(){
         System.out.println("Test 1");
     }
 
 
 
+    @Before
     public void test2(){
         System.out.println("Test 2");
+        Assert.assertTrue(true);
     }
 
 
